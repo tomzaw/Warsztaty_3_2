@@ -6,11 +6,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <%@include file="header.jsp"%>
-        <h1>Current Repairs.</h1>
         
-        
-        
-        <%@include file="footer.jsp"%>
     </body>
 </html>

@@ -27,7 +27,7 @@ public class DbUtil {
             try {
 
                 Context ctx = new InitialContext();
-                ds = (DataSource) ctx.lookup("java:comp/env/jdbc/vehicleService");
+                ds = (DataSource) ctx.lookup("java:comp/env/jdbc/crm");
 
             } catch (NamingException e) {
 
