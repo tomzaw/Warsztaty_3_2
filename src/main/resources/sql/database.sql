@@ -5,7 +5,7 @@ create table client(id int primary key auto_increment, name varchar(255), surnam
 create table employee(id int primary key auto_increment, name varchar(255), surname varchar(255), address varchar(255), phone int, note varchar(255),
 decimal workhours_salary, orderId int);
 
-create table users(id int primary key auto_increment, name varchar(255), surname varchar(255), email varchar(255) UNIQUE);
+create table users(id int primary key auto_increment, name varchar(255), surname varchar(255), email varchar(255) UNIQUE, birth_date date);
 
 create table orders(id int primary key auto_increment, order_acceptance_date datetime, planned_repair_start_date datetime, repair_start_date datetime,
 order_employee employee, problem_description text, repair_description text, status Status, vehicle Vehicle, oder_cost decimal,

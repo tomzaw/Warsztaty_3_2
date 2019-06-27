@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
  */
 public class Order {
     
+    private int id;
     private LocalDateTime orderAcceptanceDate;
     private LocalDateTime plannedRepairStartDate;
     private LocalDateTime repairStartDate;
@@ -24,7 +25,7 @@ public class Order {
     private int vehicleId;
     private int employeeId;
 
-    public Order(LocalDateTime orderAcceptanceDate, LocalDateTime plannedRepairStartDate, LocalDateTime repairStartDate, Employee orderEmployee, String problemDescription, String repairDescription, Status status, Vehicle vehicle, double orderCost, double partsCost, double workhourCost, int workhours) {
+    public Order(LocalDateTime orderAcceptanceDate, LocalDateTime plannedRepairStartDate, LocalDateTime repairStartDate, Employee orderEmployee, String problemDescription, String repairDescription, Status status, Vehicle vehicle, double orderCost, double partsCost, double workhourCost, int workhours, int clientId, int vehicleId, int employeeId) {
         this.orderAcceptanceDate = orderAcceptanceDate;
         this.plannedRepairStartDate = plannedRepairStartDate;
         this.repairStartDate = repairStartDate;
@@ -37,6 +38,24 @@ public class Order {
         this.partsCost = partsCost;
         this.workhourCost = workhourCost;
         this.workhours = workhours;
+        this.clientId = clientId;
+        this.vehicleId = vehicleId;
+        this.employeeId = employeeId;
+    }
+    
+    public Order() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
     }
 
     public LocalDateTime getOrderAcceptanceDate() {
@@ -135,6 +154,26 @@ public class Order {
         this.workhours = workhours;
     }
 
+    public int getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(int clientId) {
+        this.clientId = clientId;
+    }
+
+    public int getVehicleId() {
+        return vehicleId;
+    }
+
+    public void setVehicleId(int vehicleId) {
+        this.vehicleId = vehicleId;
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+    
     @Override
     public String toString() {
         return "Order{" + "orderAcceptanceDate=" + orderAcceptanceDate + ", plannedRepairStartDate=" + plannedRepairStartDate + ", repairStartDate=" + repairStartDate + ", orderEmployee=" + orderEmployee + ", problemDescription=" + problemDescription + ", repairDescription=" + repairDescription + ", status=" + status + ", vehicle=" + vehicle + ", orderCost=" + orderCost + ", partsCost=" + partsCost + ", workhourCost=" + workhourCost + ", workhours=" + workhours + '}';

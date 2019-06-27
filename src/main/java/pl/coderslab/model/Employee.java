@@ -6,6 +6,7 @@ package pl.coderslab.model;
  */
 public class Employee {
     
+    private int id;
     private String name;
     private String surname;
     private String address;
@@ -22,6 +23,18 @@ public class Employee {
         this.note = note;
         this.workhourSalary = workhourSalary;
     }
+
+    public Employee() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 
     public String getName() {
         return name;
@@ -71,9 +84,16 @@ public class Employee {
         this.workhourSalary = workhourSalary;
     }
 
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
+    }
+    
     @Override
     public String toString() {
         return "Employee{" + "name=" + name + ", surname=" + surname + ", address=" + address + ", phone=" + phone + ", note=" + note + ", workhourSalary=" + workhourSalary + '}';
     }
-    
 }

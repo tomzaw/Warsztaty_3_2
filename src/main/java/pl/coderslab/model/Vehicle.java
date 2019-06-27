@@ -8,6 +8,7 @@ import java.time.LocalDate;
  */
 public class Vehicle {
     
+    private int id;
     private String model;
     private String producent;
     private LocalDate productionDate;
@@ -21,6 +22,25 @@ public class Vehicle {
         this.productionDate = productionDate;
         this.registration = registration;
         this.nextReviewDate = nextReviewDate;
+    }
+
+    public Vehicle() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(int clientId) {
+        this.clientId = clientId;
     }
 
     public String getModel() {
